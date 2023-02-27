@@ -33,8 +33,6 @@ public class Mecha : MonoBehaviour
 
     private void FixedUpdate()
     {
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-
         if (input.x != 0 || input.y != 0)
         {
             isMoving = true;
@@ -67,10 +65,7 @@ public class Mecha : MonoBehaviour
         }
 
     }
-    private void OnTriggerStay(Collider other)
-    {
-        
-    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (!dentro) 
@@ -81,7 +76,15 @@ public class Mecha : MonoBehaviour
     }
     void Update()
     {
-     
+        if (isMoving == true)
+        {
+            anim.SetBool("Run", true);
+        }
+        if (isMoving == false)
+        {
+            anim.SetBool("Run", false);
+        }
+
         if (enterTrigger && Input.GetKeyDown(KeyCode.E))
         {
             Player.transform.position = this.transform.position;
