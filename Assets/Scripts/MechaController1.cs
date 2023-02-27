@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Mecha : MonoBehaviour
+public class MechaController1 : MonoBehaviour
 {
     public SpriteRenderer sr;
-    public static Mecha Instance;
+    public static MechaController Instance;
     public GameObject TextoEntrada;
     public Sprite PlayerMecha;
     public Sprite noPlayerMecha;
@@ -23,7 +23,7 @@ public class Mecha : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+  
     }
     void Start()
     {

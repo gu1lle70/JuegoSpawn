@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public GameObject target;
+    public Camera Camera;
+    public GameObject Player;
+    public GameObject Mecha;
     public float velocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +18,18 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = Vector3.Lerp(transform.position, target.transform.position, velocity * Time.deltaTime);
+        if(SwapCharacter.Instance.playerActive == true)
+        {
+            Camera.orthographicSize = 5;
+            transform.position = Vector3.Lerp(transform.position, Player.transform.position, velocity * Time.deltaTime);
+        }
+        else
+        {
+            Camera.orthographicSize = 8;
+            transform.position = Vector3.Lerp(transform.position, Mecha.transform.position, velocity * Time.deltaTime);
+        }  
+
+        
     }
 }
 
