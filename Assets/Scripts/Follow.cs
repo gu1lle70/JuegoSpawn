@@ -5,8 +5,8 @@ using UnityEngine;
 public class Follow : MonoBehaviour
 {
     public Camera Camera;
-    public GameObject Player;
-    public GameObject Mecha;
+    public Transform Player;
+    public Transform Mecha;
     public float velocity;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class Follow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if(SwapCharacter.Instance.playerActive == true)
         {
