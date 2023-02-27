@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 324dbad74e5839748a43311a4cbe3dcb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Recursive
+  fontNames:
+  - Recursive
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 30cd4651155a6ac41aa8f3b02b4f0eb9, type: 3}
+  - {fileID: 12800000, guid: 6129d93628032554da3959d254196c72, type: 3}
+  - {fileID: 12800000, guid: 41151b66cf56b6d4d85c0faf743c54d2, type: 3}
+  - {fileID: 12800000, guid: 40acb7574dbab0d4d90cd27f91777d6f, type: 3}
+  - {fileID: 12800000, guid: e1c0e3f7c8f1293458fde1f85acb3647, type: 3}
+  - {fileID: 12800000, guid: c03f43c9fb321e946866dac725251fed, type: 3}
+  - {fileID: 12800000, guid: 70d0bc5d91169ea46b7abd66919d400c, type: 3}
+  - {fileID: 12800000, guid: 60c5d5be130ee8242bb73425944394a4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
