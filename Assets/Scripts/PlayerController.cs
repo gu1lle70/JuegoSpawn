@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     float angle;
     public bool isMoving;
     public static PlayerController instance;
+    public GameObject player;
 
     // Start is called before the first frame update
     public Animator anim;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private Collider2D coll;
 
     private float baseGravity;
-    public GameObject player;
+    public Transform Player;
 
     public float dashForce = 3000;
     public float dashTime = 0.5f;
@@ -69,7 +70,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && canDash)
         {
 
-            StartCoroutine(Dash2());
+            StartCoroutine(Dash());
 
             Debug.Log("DASHED");
 
@@ -107,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public IEnumerator Dash2()
+    public IEnumerator Dash()
     {
         if (Horizontal > 0 && canDash)
         {

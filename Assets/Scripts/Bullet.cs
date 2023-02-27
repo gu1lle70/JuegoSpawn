@@ -3,38 +3,13 @@
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed;
-
-    void Update()
+    public Rigidbody2D rb;
+    void Start()
     {
-        if (PlayerController.instance.input.x == 1)
-        {
-
-            transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
-
-        }
-        if (PlayerController.instance.input.x == -1)
-        {
-
-            transform.Translate(Vector2.left * bulletSpeed * Time.deltaTime);
-
-        }
-        if (PlayerController.instance.input.y == -1)
-        {
-
-            transform.Translate(Vector2.down * bulletSpeed * Time.deltaTime);
-
-        }
-        if (PlayerController.instance.input.y == 1)
-        {
-
-            transform.Translate(Vector2.up * bulletSpeed * Time.deltaTime);
-
-        }
-
-
-
-        Destroy(gameObject, 5);
+        rb = GetComponent<Rigidbody2D>();
+        rb.AddForce(transform.up * bulletSpeed);
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

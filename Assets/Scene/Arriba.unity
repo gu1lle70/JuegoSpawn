@@ -10395,6 +10395,7 @@ GameObject:
   - component: {fileID: 2040075437}
   - component: {fileID: 2040075436}
   - component: {fileID: 2040075435}
+  - component: {fileID: 2040075439}
   m_Layer: 0
   m_Name: Mecha
   m_TagString: mecha
@@ -10482,7 +10483,7 @@ MonoBehaviour:
   dentro: 0
   isMoving: 0
   Camera: {fileID: 641028569}
-  anim: {fileID: 0}
+  anim: {fileID: 2040075439}
 --- !u!212 &2040075438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10535,6 +10536,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2040075439
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040075433}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dc755e0632ac48f4c90d35f6477e5385, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2061514329
 GameObject:
   m_ObjectHideFlags: 0
