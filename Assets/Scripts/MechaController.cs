@@ -11,7 +11,9 @@ public class MechaController : MonoBehaviour
 
     [Header("For Shooring")]
     [SerializeField] GameObject bullet;
+    [SerializeField] GameObject cohete;
     [SerializeField] float fireRate;
+    [SerializeField] float fireRateRocket;
     private float nextFireTime;
     private Rigidbody2D rb;
     float angle;
@@ -25,7 +27,6 @@ public class MechaController : MonoBehaviour
     private TrailRenderer tr;
     private Collider2D coll;
 
-    private float baseGravity;
     public Transform Player;
 
     public float dashForce = 3000;
@@ -44,7 +45,6 @@ public class MechaController : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         tr = GetComponent<TrailRenderer>();
-        baseGravity = rb.gravityScale;
 
     }
     private void Awake()
@@ -98,6 +98,7 @@ public class MechaController : MonoBehaviour
 
         }
         Shooting();
+        ShootingRocket();
 
     }
 
@@ -115,6 +116,14 @@ public class MechaController : MonoBehaviour
         {
             Instantiate(bullet, transform.position, transform.rotation);
             nextFireTime = fireRate + Time.time;
+        }
+    }
+    void ShootingRocket()
+    {
+        if (Input.GetKey(KeyCode.F) && nextFireTime < Time.time)
+        {
+            Instantiate(cohete, transform.position, transform.rotation);
+            nextFireTime = fireRateRocket + Time.time;
         }
     }
 }

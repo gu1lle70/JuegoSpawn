@@ -239,10 +239,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gimnasio
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 75c717163def0864d8f97a11ae2baf3c, type: 2}
-  m_sharedMaterial: {fileID: -6534873102341359296, guid: 75c717163def0864d8f97a11ae2baf3c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -388,7 +388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -572,8 +571,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Jugar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 75c717163def0864d8f97a11ae2baf3c, type: 2}
-  m_sharedMaterial: {fileID: -6534873102341359296, guid: 75c717163def0864d8f97a11ae2baf3c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -692,8 +691,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1349728393}
-        m_TargetAssemblyTypeName: letrasUI, Assembly-CSharp
-        m_MethodName: OnButtonPressJugar
+        m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
+        m_MethodName: StartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -712,7 +711,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1349728388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2a5cc570723354438c8fc4dd24963c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 57c4fd8ff2d2dca4aac7ad75624890ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1354177839
@@ -777,8 +776,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 75c717163def0864d8f97a11ae2baf3c, type: 2}
-  m_sharedMaterial: {fileID: -6534873102341359296, guid: 75c717163def0864d8f97a11ae2baf3c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
