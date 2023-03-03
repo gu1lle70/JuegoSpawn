@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float fireRate;
     private float nextFireTime;
     private Rigidbody2D rb;
+ 
 
     public bool isMoving;
     public static PlayerController instance;
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         tr = GetComponent<TrailRenderer>();
+       
         baseGravity = rb.gravityScale;
 
     }
@@ -180,8 +182,10 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && nextFireTime < Time.time)
         {
+            anim.SetTrigger("ShootHorizontal");
             Instantiate(bullet, transform.position, transform.rotation);
             nextFireTime = fireRate + Time.time;
         }
+
     }
 }

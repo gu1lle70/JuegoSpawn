@@ -46,6 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   playerRB: {fileID: 0}
+  input: {x: 0, y: 0}
+  shootArriba: {fileID: 0}
+  shootHorizontal: {fileID: 0}
   bullet: {fileID: 5524651404041862723, guid: 3df44ccecccaf7c42be962fc86d564ec, type: 3}
   fireRate: 0.5
+  cs: {fileID: 0}
   isMoving: 0
+  player: {fileID: 0}
+  anim: {fileID: 0}
+  sr: {fileID: 0}
+  Player: {fileID: 0}
+  dashForce: 3000
+  dashTime: 0.5
+  isDashing: 0
+  canDash: 1
+  candashTime: 1

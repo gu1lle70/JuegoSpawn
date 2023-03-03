@@ -897,6 +897,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 544807130778086631, guid: 37dea38e8e700b944a68c06d6ed165ae,
         type: 3}
+      propertyPath: cs
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 544807130778086631, guid: 37dea38e8e700b944a68c06d6ed165ae,
+        type: 3}
       propertyPath: sr
       value: 
       objectReference: {fileID: 1839312854}
@@ -15363,7 +15368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -15726,18 +15730,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14319801, y: -0.009025753}
+  m_Offset: {x: 0.00067186356, y: -0.009025753}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.40625, y: 1.21875}
+    oldSize: {x: 0.9375, y: 1.21875}
     newSize: {x: 0.9375, y: 1.40625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1098328, y: 1.2292274}
+  m_Size: {x: 0.954896, y: 1.2292274}
   m_EdgeRadius: 0
 --- !u!50 &1839312853
 Rigidbody2D:
@@ -15801,7 +15805,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1289877827, guid: a925d18edb1d2b04eadfff92a7a07b83, type: 3}
+  m_Sprite: {fileID: 600167995, guid: a925d18edb1d2b04eadfff92a7a07b83, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
