@@ -92,7 +92,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.6.5",
+      "version": "1.6.6",
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -154,7 +154,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.purchasing": {
-      "version": "4.1.4",
+      "version": "4.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {

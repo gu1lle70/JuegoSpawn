@@ -8,13 +8,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float speed;
     [SerializeField] Rigidbody2D playerRB;
     public Vector2 input;
+    [SerializeField] Sprite shootArriba;
+    [SerializeField] Sprite shootHorizontal;
 
     [Header("For Shooring")]
     [SerializeField] GameObject bullet;
     [SerializeField] float fireRate;
     private float nextFireTime;
     private Rigidbody2D rb;
-    float angle;
+
     public bool isMoving;
     public static PlayerController instance;
     public GameObject player;
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
     public bool isDashing = false;
     public bool canDash = true;
     public float candashTime = 1f;
-    private float dir;
+   
 
     void Start()
     {
@@ -80,9 +82,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-
-        rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
-
+        if (input.x != 0 || input.y !=0)
+        {
+            transform.position += new Vector3(speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime);
+        }
         if (input.x != 0 || input.y != 0)
         {
             isMoving = true;
@@ -91,21 +94,39 @@ public class PlayerController : MonoBehaviour
         {
             isMoving = false;
         }
-
-        if (input.x > 0)
+    if (Input.GetAxisRaw("HorizontalShoot") != 0 || Input.GetAxisRaw("VerticalShoot") != 0)
+    {
+        if (Input.GetAxisRaw("HorizontalShoot") == 1)
         {
+                
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
 
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
 
         }
-        if (input.x < 0)
+        if (Input.GetAxisRaw("HorizontalShoot") == -1)
         {
-
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+                
+               
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
 
         }
+        if (Input.GetAxisRaw("VerticalShoot") == 1)
+        {
+
+             
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+
+
+            }
+        if (Input.GetAxisRaw("VerticalShoot") == -1)
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 270);
+
+            }
+            
+
+    }
         Shooting();
-
     }
 
     public IEnumerator Dash()
