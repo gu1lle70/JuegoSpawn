@@ -8,6 +8,7 @@ public class Follow : MonoBehaviour
     public Transform Player;
     public Transform Mecha;
     public float velocity;
+    [SerializeField] float pointerCam;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,11 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SwapCharacter.Instance.playerActive == true)
+        
+
+        if (SwapCharacter.Instance.playerActive == true)
         {
-            Camera.orthographicSize = 5;
+            Camera.orthographicSize = 6;
             transform.position = Vector3.Lerp(transform.position, Player.transform.position, velocity * Time.deltaTime);
         }
         else

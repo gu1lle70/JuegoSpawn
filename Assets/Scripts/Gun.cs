@@ -15,7 +15,7 @@ public class Gun : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update()   
     {
         Vector2 MousePoint = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direccion = MousePoint - (Vector2)transform.position;

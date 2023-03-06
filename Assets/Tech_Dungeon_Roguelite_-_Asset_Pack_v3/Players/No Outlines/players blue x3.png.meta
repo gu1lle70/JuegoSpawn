@@ -896,9 +896,9 @@ TextureImporter:
       name: players blue x3_58
       rect:
         serializedVersion: 2
-        x: 27
+        x: 54
         y: 774
-        width: 54
+        width: 27
         height: 39
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -938,10 +938,10 @@ TextureImporter:
       name: players blue x3_60
       rect:
         serializedVersion: 2
-        x: 321
-        y: 774
-        width: 45
-        height: 39
+        x: 351
+        y: 786
+        width: 15
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2488,6 +2488,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: players blue x3_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 774
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471c5e16f40188149b393cfa84270908
+      internalID: -1230231124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2501,21 +2522,21 @@ TextureImporter:
     nameFileIdTable:
       players blue x3_1: -2040666855
       players blue x3_115: -605022458
-      players blue x3_42: 1880487573
+      players blue x3_3: 212590759
       players blue x3_72: 566303381
       players blue x3_70: 676065319
-      players blue x3_67: 698413472
+      players blue x3_74: 1342659730
       players blue x3_24: 450157800
       players blue x3_27: -2026441383
       players blue x3_43: -359777411
       players blue x3_16: 1118191907
-      players blue x3_12: 1941967524
+      players blue x3_42: 1880487573
       players blue x3_62: -575920843
       players blue x3_50: 1285299482
       players blue x3_150: -1228570120
-      players blue x3_112: -458536396
       players blue x3_118: -699670738
       players blue x3_91: 560356138
+      players blue x3_112: -458536396
       players blue x3_61: 600804443
       players blue x3_133: -2080399096
       players blue x3_98: 1334429041
@@ -2531,10 +2552,10 @@ TextureImporter:
       players blue x3_53: -1619487717
       players blue x3_22: -329469242
       players blue x3_157: 732917996
-      players blue x3_156: -1605456739
-      players blue x3_6: 600167995
-      players blue x3_77: 567142158
       players blue x3_54: -992956049
+      players blue x3_6: 600167995
+      players blue x3_156: -1605456739
+      players blue x3_77: 567142158
       players blue x3_8: 1683534232
       players blue x3_86: -351109114
       players blue x3_57: 1084884064
@@ -2569,10 +2590,10 @@ TextureImporter:
       players blue x3_2: -3213578
       players blue x3_92: -968505614
       players blue x3_146: -2094027908
-      players blue x3_143: 903219608
+      players blue x3_149: 1370009355
       players blue x3_63: -2013695394
       players blue x3_41: 639447998
-      players blue x3_149: 1370009355
+      players blue x3_143: 903219608
       players blue x3_14: -385333294
       players blue x3_124: -304056466
       players blue x3_141: 358701362
@@ -2625,42 +2646,42 @@ TextureImporter:
       players blue x3_20: -1443186155
       players blue x3_4: 671859896
       players blue x3_7: 591040291
-      players blue x3_49: 1539003448
+      players blue x3_129: 380046771
       players blue x3_59: 1558547683
       players blue x3_104: -2006519426
       players blue x3_55: -693228117
-      players blue x3_29: -262425096
+      players blue x3_49: 1539003448
       players blue x3_56: -1588829559
       players blue x3_84: -117835613
+      players blue x3_29: -262425096
       players blue x3_113: -1712373418
-      players blue x3_37: -310663387
       players blue x3_25: -1228150201
       players blue x3_123: 922252217
       players blue x3_90: 1255563250
       players blue x3_134: 1791971677
-      players blue x3_81: 1444635921
+      players blue x3_37: -310663387
       players blue x3_21: -339233404
       players blue x3_32: -748490340
       players blue x3_142: 234059372
-      players blue x3_3: 212590759
+      players blue x3_81: 1444635921
       players blue x3_87: 1590607560
       players blue x3_151: 1409672293
       players blue x3_78: 1776622016
-      players blue x3_79: -100471729
-      players blue x3_96: -1026411383
-      players blue x3_132: 173396027
       players blue x3_58: -1942126821
-      players blue x3_23: 1557930735
-      players blue x3_159: 782944364
-      players blue x3_129: 380046771
-      players blue x3_108: -1639233202
-      players blue x3_52: 826710124
+      players blue x3_96: -1026411383
+      players blue x3_79: -100471729
+      players blue x3_132: 173396027
       players blue x3_148: -1527403865
-      players blue x3_85: -2048644057
       players blue x3_31: 1495692697
-      players blue x3_140: -1709333549
-      players blue x3_74: 1342659730
+      players blue x3_108: -1639233202
+      players blue x3_67: 698413472
+      players blue x3_23: 1557930735
+      players blue x3_85: -2048644057
+      players blue x3_159: 782944364
       players blue x3_65: -1933649749
+      players blue x3_140: -1709333549
+      players blue x3_12: 1941967524
+      players blue x3_52: 826710124
       players blue x3_45: -97613060
   spritePackingTag: 
   pSDRemoveMatte: 0

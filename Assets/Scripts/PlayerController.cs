@@ -13,11 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("For Shooring")]
     [SerializeField] GameObject bullet;
-    [SerializeField] float fireRate;
-    private float nextFireTime;
     private Rigidbody2D rb;
- 
 
+   
     public bool isMoving;
     public static PlayerController instance;
     public GameObject player;
@@ -38,7 +36,10 @@ public class PlayerController : MonoBehaviour
     public bool isDashing = false;
     public bool canDash = true;
     public float candashTime = 1f;
-   
+
+    [Header("For Shooting Direction")]
+    public Transform gun;
+    public Vector2 direction;
 
     void Start()
     {
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void FixedUpdate()
     {
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
@@ -96,41 +98,26 @@ public class PlayerController : MonoBehaviour
         {
             isMoving = false;
         }
-    if (Input.GetAxisRaw("HorizontalShoot") != 0 || Input.GetAxisRaw("VerticalShoot") != 0)
-    {
-        if (Input.GetAxisRaw("HorizontalShoot") == 1)
+
+
+        isMoving = input.magnitude > 0;
+
+
+        // Determinar la posición del mouse en relación con la pantalla
+        float mousePosX = Input.mousePosition.x / Screen.width;
+        bool isMouseOnLeft = mousePosX < 0.5f;
+
+        // Girar el personaje hacia la izquierda o hacia la derecha según la posición del mouse
+        if (isMouseOnLeft)
         {
-                
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-
-
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
-        if (Input.GetAxisRaw("HorizontalShoot") == -1)
+        else
         {
-                
-               
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
-        if (Input.GetAxisRaw("VerticalShoot") == 1)
-        {
-
-             
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-
-
-            }
-        if (Input.GetAxisRaw("VerticalShoot") == -1)
-            {
-                transform.localRotation = Quaternion.Euler(0, 0, 270);
-
-            }
-            
-
+           
     }
-        Shooting();
-    }
-
     public IEnumerator Dash()
     {
         if (Horizontal > 0 && canDash)
@@ -178,14 +165,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log("hola");
         }
     }
-    void Shooting()
-    {
-        if (Input.GetKey(KeyCode.Space) && nextFireTime < Time.time)
-        {
-            anim.SetTrigger("ShootHorizontal");
-            Instantiate(bullet, transform.position, transform.rotation);
-            nextFireTime = fireRate + Time.time;
-        }
-
-    }
+    
 }
