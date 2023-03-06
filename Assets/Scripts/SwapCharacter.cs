@@ -61,6 +61,7 @@ public class SwapCharacter : MonoBehaviour
             Mecha.GetComponent<CircleCollider2D>().enabled = false;
             this.GetComponent<SpriteRenderer>().enabled = true;
             MechaController.enabled = false;
+            Mecha.transform.position = this.transform.position;
             playerActive = true;   
 
         }
