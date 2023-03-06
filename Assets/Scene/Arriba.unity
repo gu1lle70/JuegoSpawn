@@ -2429,6 +2429,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!1 &915147340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2461,8 @@ Transform:
   m_Father: {fileID: 1839312857}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> origin/main
 --- !u!1 &937575992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8634,12 +8637,12 @@ PrefabInstance:
     - target: {fileID: 4499725991196916052, guid: 19af61a97a9a94b499ef8fbbb9defd91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -990.9
+      value: -806
       objectReference: {fileID: 0}
     - target: {fileID: 4499725991196916052, guid: 19af61a97a9a94b499ef8fbbb9defd91,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 422.3
+      value: 454
       objectReference: {fileID: 0}
     - target: {fileID: 4499725991500942817, guid: 19af61a97a9a94b499ef8fbbb9defd91,
         type: 3}
