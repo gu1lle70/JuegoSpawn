@@ -16,27 +16,15 @@ public class MechaController : MonoBehaviour
     [SerializeField] float fireRateRocket;
     private float nextFireTime;
     private Rigidbody2D rb;
-    float angle;
     public bool isMoving;
     public static PlayerController instance;
-    public GameObject player;
 
     // Start is called before the first frame update
     public Animator anim;
     public SpriteRenderer sr;
-    private TrailRenderer tr;
+
     private Collider2D coll;
 
-    public Transform Player;
-
-    public float dashForce = 3000;
-    public float dashTime = 0.5f;
-    private float Horizontal;
-
-    public bool isDashing = false;
-    public bool canDash = true;
-    public float candashTime = 1f;
-    private float dir;
 
     void Start()
     {
@@ -44,16 +32,9 @@ public class MechaController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
-        tr = GetComponent<TrailRenderer>();
 
     }
-    private void Awake()
-    {
-        
-    }
 
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -65,8 +46,6 @@ public class MechaController : MonoBehaviour
         {
             anim.SetBool("Run", false);
         }
-
-
         
     }
 
@@ -112,7 +91,7 @@ public class MechaController : MonoBehaviour
     }
     void Shooting()
     {
-        if (Input.GetKey(KeyCode.Space) && nextFireTime < Time.time)
+        if (Input.GetButton("Fire1") && nextFireTime < Time.time)
         {
             Instantiate(bullet, transform.position, transform.rotation);
             nextFireTime = fireRate + Time.time;

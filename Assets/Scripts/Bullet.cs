@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 inputBullet;
 
-    [SerializeField] public Transform player;
     [SerializeField] public Transform gun;
     [SerializeField] public Camera cam;
 
@@ -37,18 +36,7 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        inputBullet = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-        // Obtener la posición del mouse en el mundo
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = 0;
-
-        // Calcular la dirección del arma hacia el mouse
-        Vector3 gunDir = mousePos - gun.position;
-        gunDir.z = 0;
-
-        // Girar el arma hacia la dirección del mouse
-        gun.right = gunDir.normalized;
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)
