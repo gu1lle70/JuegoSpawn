@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - B
   - 
   - 
   - 
@@ -42,4 +42,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Suelo
+    uniqueID: 4107287299
+    locked: 0
+  - name: Paredes
+    uniqueID: 643304333
+    locked: 0
+  - name: Player-Gun-Bullets
+    uniqueID: 350009465
+    locked: 0
+  - name: Enemy
+    uniqueID: 3117825909
+    locked: 0
+  - name: Plantas
+    uniqueID: 1316037199
+    locked: 0
+  - name: Rock
+    uniqueID: 2770060819
+    locked: 0
+  - name: Arbol
+    uniqueID: 4136544749
+    locked: 0
+  - name: Paredes lat
+    uniqueID: 3417725943
     locked: 0

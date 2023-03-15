@@ -171,9 +171,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 660
-        y: 562
+        y: 561
         width: 216
-        height: 270
+        height: 271
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,7 +212,7 @@ TextureImporter:
       name: 32x32_DEMO_5
       rect:
         serializedVersion: 2
-        x: 960
+        x: 962
         y: 544
         width: 32
         height: 288
@@ -235,7 +235,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1024
         y: 688
-        width: 192
+        width: 63
         height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -338,10 +338,10 @@ TextureImporter:
       name: 32x32_DEMO_11
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
-        width: 380
-        height: 160
+        x: 897
+        y: 396
+        width: 128
+        height: 138
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -679,7 +679,7 @@ TextureImporter:
         width: 189
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -700,7 +700,7 @@ TextureImporter:
         width: 224
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -721,7 +721,7 @@ TextureImporter:
         width: 129
         height: 143
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -729,6 +729,27 @@ TextureImporter:
       bones: []
       spriteID: ecaf796182287634caf9b8194d697fa2
       internalID: 2040641974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 32x32_DEMO_30
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 708
+        width: 67
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 454aa2e8185a34e4e8fe8187d2f63be0
+      internalID: -605373074
       vertices: []
       indices: 
       edges: []
@@ -744,6 +765,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      32x32_DEMO_30: -605373074
       32x32_DEMO_27: -1694856462
       32x32_DEMO_2: -641783242
       32x32_DEMO_1: 1695121125
@@ -774,6 +796,7 @@ TextureImporter:
       32x32_DEMO_7: 1657256026
       32x32_DEMO_14: -1565850351
       32x32_DEMO_16: -304669093
+      32x32_DEMO_31: -473588501
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -11,23 +11,41 @@ public class Weapon : MonoBehaviour
     
     private void Update()
     {
-        // Obtener la posición del ratón en el mundo
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0f;
+        Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
 
-        // Calcular la dirección hacia la cual debe apuntar el arma
-        Vector3 direction = (mousePosition - GameManager.Instance.Gun.transform.position).normalized;
+        difference.Normalize();
 
-        // Calcular el ángulo de rotación
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        // Rotar el objeto que sostiene el arma
-        GameManager.Instance.Gun.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
+
+        if (rotationZ < -90 || rotationZ > 90)
+        {
 
 
-        Shooting();
+
+            if (GameManager.Instance.Player.transform.eulerAngles.y == 0)
+            {
+
+
+                transform.localRotation = Quaternion.Euler(180, 0, -rotationZ);
+
+
+            }
+            else if (GameManager.Instance.Player.transform.eulerAngles.y == 180)
+            {
+
+
+                transform.localRotation = Quaternion.Euler(180, 180, -rotationZ);
+
+
+            }
+
+        }
+
+          Shooting();
         
-    }
+ }
 
     void Shooting()
     {

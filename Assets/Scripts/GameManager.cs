@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject Mecha;
     public GameObject Gun;
+    public bool isMouseOnLeft;
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     }
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +36,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        float mousePosX = Input.mousePosition.x / Screen.width;
+        isMouseOnLeft = mousePosX < 0.5f;
+
+
+
     }
 }

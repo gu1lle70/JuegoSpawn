@@ -7,7 +7,8 @@ public class SwapCharacter : MonoBehaviour
     public PlayerController PlayerController;
     public MechaController MechaController;
     public Weapon WeaponController;
-    public CamExtend CamController;
+    public CamExtend CamPlayer;
+    public Follow CamMecha;
 
     public bool playerActive = true;
     public bool isIn;
@@ -47,7 +48,9 @@ public class SwapCharacter : MonoBehaviour
             //DesactivarScript Player-Arma-Cam
             PlayerController.enabled = false;
             WeaponController.enabled = false;
-            CamController.enabled = false;
+            //Camara
+            CamPlayer.enabled = false;
+            CamMecha.enabled = true;
             //ActivarMecha
             MechaController.enabled = true;
             //Desactivar spriteArma
@@ -67,7 +70,10 @@ public class SwapCharacter : MonoBehaviour
             //ActivarScript Player-Arma-Cam
             PlayerController.enabled = true;
             WeaponController.enabled = true;
-            CamController.enabled = true;
+
+            //Camera
+            CamPlayer.enabled = true;
+            CamMecha.enabled = false;
             //ActivarMecha
             MechaController.enabled = false;
             //Activar spriteArma

@@ -104,11 +104,10 @@ public class PlayerController : MonoBehaviour
 
 
         // Determinar la posición del mouse en relación con la pantalla
-        float mousePosX = Input.mousePosition.x / Screen.width;
-        bool isMouseOnLeft = mousePosX < 0.5f;
+       
 
         // Girar el personaje hacia la izquierda o hacia la derecha según la posición del mouse
-        if (isMouseOnLeft)
+        if (GameManager.Instance.isMouseOnLeft)
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
@@ -120,7 +119,7 @@ public class PlayerController : MonoBehaviour
     }
     public IEnumerator Dash()
     {
-        if (Horizontal > 0 && canDash)
+        if (input.x > 0 && canDash)
         {
             isDashing = true;
             canDash = false;
