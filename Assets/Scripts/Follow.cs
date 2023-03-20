@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Follow : MonoBehaviour
 {
-    public Camera Camera;
     public float velocity;
     [SerializeField] float pointerCam;
 
@@ -21,12 +20,12 @@ public class Follow : MonoBehaviour
 
         if (SwapCharacter.Instance.playerActive == true)
         {
-            Camera.orthographicSize = 6;
+            GameManager.Instance.Cam.orthographicSize = 6;
             transform.position = Vector3.Lerp(transform.position, GameManager.Instance.Player.transform.position, velocity * Time.deltaTime);
         }
         if(SwapCharacter.Instance.playerActive == false)
         {
-            Camera.orthographicSize = 8;
+            GameManager.Instance.Cam.orthographicSize = 8;
             transform.position = Vector3.Lerp(transform.position, GameManager.Instance.Mecha.transform.position, velocity * Time.deltaTime);
         }  
 

@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject bullet;
     private Rigidbody2D rb;
 
-   
+    [Header("For Shooting Direction")]
+    public Transform gun;
+    public Vector2 direction;
+
     public bool isMoving;
     public static PlayerController instance;
     public GameObject player;
@@ -27,7 +30,6 @@ public class PlayerController : MonoBehaviour
     private Collider2D coll;
 
     private float baseGravity;
-    public Transform Player;
 
     public float dashForce = 3000;
     public float dashTime = 0.5f;
@@ -37,10 +39,8 @@ public class PlayerController : MonoBehaviour
     public bool canDash = true;
     public float candashTime = 1f;
 
-    [Header("For Shooting Direction")]
-    public Transform gun;
-    public Vector2 direction;
-
+    
+    
     void Start()
     {
         coll = GetComponent<Collider2D>();

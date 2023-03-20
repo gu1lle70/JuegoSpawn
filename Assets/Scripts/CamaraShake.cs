@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CamaraShake : MonoBehaviour
 {
-    public Camera cam;
     public void Shake(float duration, float intensity)
     {
         StartCoroutine(ShakeCoroutine(duration, intensity));
@@ -12,7 +11,7 @@ public class CamaraShake : MonoBehaviour
 
     private IEnumerator ShakeCoroutine(float duration, float intensity)
     {
-        Vector3 originalPosition = cam.transform.localPosition;
+        Vector3 originalPosition = GameManager.Instance.Cam.transform.localPosition;
         float elapsed = 0.0f;
 
         while (elapsed < duration)
@@ -26,6 +25,6 @@ public class CamaraShake : MonoBehaviour
             yield return null;
         }
 
-        cam.transform.localPosition = originalPosition;
+        GameManager.Instance.Cam.transform.localPosition = originalPosition;
     }
 }

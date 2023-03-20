@@ -7,10 +7,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] float bulletSpeed;
     public Rigidbody2D rb;
     public Vector2 inputBullet;
-
-    [SerializeField] public Transform gun;
-    [SerializeField] public Camera cam;
-
     void Start()
     {
         if (inputBullet.x == 0)

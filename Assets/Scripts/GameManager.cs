@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance {  get; private set; }
 
     public GameObject Player;
+    public Camera Cam;
     public GameObject Mecha;
     public GameObject Gun;
     public bool isMouseOnLeft;
