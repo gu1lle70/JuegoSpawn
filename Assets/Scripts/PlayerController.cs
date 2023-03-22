@@ -61,8 +61,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (isMoving == true)
+        if (!pauseMenu.instance.isPaused) { 
+            if (isMoving == true)
         {
             anim.SetBool("Run", true);
         }
@@ -75,17 +75,18 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && canDash)
         {
 
-            StartCoroutine(Dash());
+     
 
             Debug.Log("DASHED");
 
         }
     }
-
+ }
 
     private void FixedUpdate()
     {
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if (!pauseMenu.instance.isPaused) { 
+            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         if (input.x != 0 || input.y !=0)
         {
             transform.position += new Vector3(speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime);
@@ -115,48 +116,12 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
-           
+         
+        
     }
-    public IEnumerator Dash()
-    {
-        if (input.x > 0 && canDash)
-        {
-            isDashing = true;
-            canDash = false;
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(dashForce * transform.localScale.x, 0);
-            anim.SetTrigger("Dash");
-            tr.emitting = true;
-            coll.sharedMaterial.friction = 1f;
-            yield return new WaitForSeconds(dashTime);
-            isDashing = false;
-            rb.gravityScale = baseGravity;
-            tr.emitting = false;
-            yield return new WaitForSeconds(candashTime);
-            canDash = true;
 
-        }
-        if (input.y < 0 && canDash)
-        {
-            isDashing = true;
-            canDash = false;
-            rb.gravityScale = 0f;
-            rb.velocity = new Vector2(dashForce * -transform.localScale.x, 0);
-            anim.SetTrigger("Dash");
-            tr.emitting = true;
-            coll.sharedMaterial.friction = 1f;
-            yield return new WaitForSeconds(dashTime);
-            isDashing = false;
-            rb.gravityScale = baseGravity;
-            tr.emitting = false;
-            yield return new WaitForSeconds(candashTime);
-            canDash = true;
-
-        }
-
-
-
-    }
+   
+ }
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "mecha")
@@ -164,5 +129,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log("hola");
         }
     }
-    
+
 }

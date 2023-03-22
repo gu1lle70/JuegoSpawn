@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject Mecha;
     public GameObject Gun;
     public bool isMouseOnLeft;
+    public Vector3 mousePos;
 
     private void Awake()
     {
@@ -25,23 +26,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-
-
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
+    }
     void Update()
     {
 
         float mousePosX = Input.mousePosition.x / Screen.width;
         isMouseOnLeft = mousePosX < 0.5f;
 
-
+        mousePos = GameManager.Instance.Cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
 }

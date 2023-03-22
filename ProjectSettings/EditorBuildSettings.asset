@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scene/Arriba.unity
-    guid: f213c1e0804bf064d94ad89530cd0a7a
-  - enabled: 1
     path: Assets/Scene/Start.unity
     guid: 43f5f484480209c459b8d8a5035a4226
+  - enabled: 1
+    path: Assets/Scene/Arriba.unity
+    guid: f213c1e0804bf064d94ad89530cd0a7a
   - enabled: 1
     path: Assets/Scene/Pausa.unity
     guid: c854958f265d31e4cad992bd6095902a

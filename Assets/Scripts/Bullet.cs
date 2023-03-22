@@ -4,35 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float bulletSpeed;
+
     public Rigidbody2D rb;
     public Vector2 inputBullet;
-    void Start()
+    [SerializeField] float bulletSpeed = 5 ;
+
+    void FixedUpdate()
     {
-        if (inputBullet.x == 0)
-        {
-            rb.AddForce(transform.right * bulletSpeed);
-        }
-
-        if (inputBullet.x == -1)
-        {
-            rb.AddForce(-transform.right * bulletSpeed);
-        }
-
-        if (inputBullet.y == -1)
-        {
-            rb.AddForce(-transform.up * bulletSpeed);
-        }
-
-        if (inputBullet.y == 1)
-        {
-            rb.AddForce(transform.up * bulletSpeed);
-        }
-    }
-
-    void Update()
-    {
-        
+        rb.AddForce(transform.right * bulletSpeed );
     }
 
     void OnTriggerEnter2D(Collider2D other)

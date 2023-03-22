@@ -5,15 +5,14 @@ public class Weapon : MonoBehaviour
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject bullet;
     [SerializeField] float fireRate;
+
     private float nextFireTime;
-    public float recoilForce = 500f;
-    public float maxRecoilDistance = 0.5f;
     public Rigidbody2D rb;
-    Vector3 mousePosition;
     
     private void Update()
     {
-        Vector3 difference = GameManager.Instance.Cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        
+        Vector3 difference = GameManager.Instance.mousePos - transform.position;
 
         difference.Normalize();
 
@@ -55,7 +54,8 @@ public class Weapon : MonoBehaviour
         if (Input.GetButton("Fire1") && nextFireTime < Time.time)
         {
             Debug.Log("Has disparado");
-            Instantiate(bullet, transform.position, transform.rotation);
+            Instantiate(bullet, transform.position, transform.rotation);    
+          
             nextFireTime = fireRate + Time.time;
           
         }
