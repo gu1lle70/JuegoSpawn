@@ -7,7 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scene/Start.unity
-    guid: 43f5f484480209c459b8d8a5035a4226
+    guid: cf825ad2c2ddf434ba5cfb677efec983
+  - enabled: 1
+    path: Assets/Scene/Options.unity
+    guid: e27f398452c7a6647ab895c1f36681a0
   - enabled: 1
     path: Assets/Scene/Arriba.unity
     guid: f213c1e0804bf064d94ad89530cd0a7a
