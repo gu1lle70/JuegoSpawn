@@ -5,7 +5,12 @@ using UnityEngine;
 public class CamExtend : MonoBehaviour
 {
     [SerializeField] float maxCam;
+    public GameObject player;
 
+    private void Start()
+    {
+        transform.position = player.transform.position;
+    }
     // Update is called once per frame
     void Update()
     {
