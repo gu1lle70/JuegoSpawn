@@ -35,4 +35,9 @@ public class letrasUI : MonoBehaviour
         Application.Quit();
 
     }
+    public void Options()
+    {
+        SceneManager.LoadScene("Options");
+
+    }
 }

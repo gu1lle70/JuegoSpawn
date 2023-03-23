@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
             input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         if (input.x != 0 || input.y !=0)
         {
-            transform.position += new Vector3(speed * input.x * Time.deltaTime, speed * input.y * Time.deltaTime);
+            transform.position += new Vector3(speed * input.x * Time.fixedDeltaTime, speed * input.y * Time.fixedDeltaTime);
         }
         if (input.x != 0 || input.y != 0)
         {
