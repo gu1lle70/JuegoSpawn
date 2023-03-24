@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this);
+           
         }
         else
         {
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+
 
         float mousePosX = Input.mousePosition.x / Screen.width;
         isMouseOnLeft = mousePosX < 0.5f;
