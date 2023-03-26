@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scene/Options.unity
     guid: e27f398452c7a6647ab895c1f36681a0
   - enabled: 1
+    path: Assets/Scene/OptionsPause.unity
+    guid: c44788483deaaf74b8e9d70a1d014f7c
+  - enabled: 1
     path: Assets/Scene/Arriba.unity
     guid: f213c1e0804bf064d94ad89530cd0a7a
   - enabled: 1

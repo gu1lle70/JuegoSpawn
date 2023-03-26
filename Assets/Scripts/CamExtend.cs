@@ -21,5 +21,14 @@ public class CamExtend : MonoBehaviour
         targetPos.y = Mathf.Clamp(targetPos.y, -maxCam + GameManager.Instance.Player.transform.position.y, maxCam + GameManager.Instance.Player.transform.position.y );
 
         this.transform.position = targetPos;
+        if (SwapCharacter.Instance.playerActive == true)
+        {
+            GameManager.Instance.Cam.orthographicSize = 7;
+            
+        }
+        else
+        {
+            GameManager.Instance.Cam.orthographicSize = 8;
+        }
     }
 }

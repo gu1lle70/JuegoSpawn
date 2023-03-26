@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseMenu : MonoBehaviour
 {
     public static pauseMenu instance;
     public GameObject PauseMenu;
+    public GameObject OptionsMenu;
     public CamExtend CamPlayer;
     public Follow CamMecha;
     public Weapon WeaponController;
@@ -26,8 +28,10 @@ public class pauseMenu : MonoBehaviour
     {
         isPaused = false;
         PauseMenu.SetActive(false);
+        OptionsMenu.SetActive(false);
         CamPlayer.enabled = true;
         CamMecha.enabled = false;
+
 
 
     }
@@ -55,14 +59,22 @@ public class pauseMenu : MonoBehaviour
             }
 
         }
+       
 
     }
+    public void OnButtonPressOptionsJugar()
+    {
+        OptionsMenu.SetActive(true);
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+
 
     public void Resume()
     {
         Time.timeScale = 1;
         isPaused = false;
-        PauseMenu.SetActive(false);
+        PauseMenu.SetActive(false); 
         if(SwapCharacter.Instance.playerActive)
         {
 

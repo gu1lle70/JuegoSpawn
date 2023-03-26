@@ -20,15 +20,15 @@ public class Follow : MonoBehaviour
 
         if (SwapCharacter.Instance.playerActive == true)
         {
-            GameManager.Instance.Cam.orthographicSize = 6;
+            GameManager.Instance.Cam.orthographicSize = 7;
             transform.position = Vector3.Lerp(transform.position, GameManager.Instance.Player.transform.position, velocity * Time.deltaTime);
         }
-        if(SwapCharacter.Instance.playerActive == false)
+        else
         {
             GameManager.Instance.Cam.orthographicSize = 8;
             transform.position = Vector3.Lerp(transform.position, GameManager.Instance.Mecha.transform.position, velocity * Time.deltaTime);
-        }  
 
+        }
         
     }
 }
